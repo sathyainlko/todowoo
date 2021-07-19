@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<h1>Create</h1>
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2 style="background-color:DodgerBlue;">{{ error }}</h2>
+
+<form method="POST">
+
+	{% csrf_token %}
+
+	{{ form.as_p }}
+
+	<button type="submit">Create</button>
+
+</form>
+
+{% endblock %}
